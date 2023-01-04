@@ -1,8 +1,8 @@
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { FunctionComponent  } from 'react'
-import Details from './components/Details'
-import ErrorPage from './components/ErrorPage'
+import { FunctionComponent } from 'react'
+import Details from './components/Details/Details'
+import ErrorPage from './components/ErrorComponents/ErrorPage'
 
 const App: FunctionComponent = () => {
   return (

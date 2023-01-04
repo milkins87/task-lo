@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect, FunctionComponent } from 'react'
-import ErrorBoundary from '../ErrorBoundary'
-import ErrorPage from './ErrorPage'
-import { DetailsAPIResponse } from '../APIResponsesTypes'
+import ErrorBoundary from '../ErrorComponents/ErrorBoundary'
+import ErrorPage from '../ErrorComponents/ErrorPage'
+import { DetailsAPIResponse } from '../../APIResponsesTypes'
 
 import './details.scss'
 
@@ -25,7 +25,6 @@ const Details: FunctionComponent = () => {
   }, [])
 
   async function requestDetails() {
-    // const req = await fetch(`https://storage.googleapis.com/coding-session-rest-api/${id}`)
     // To skip the cors issues, I had to use https://api.allorigins.win/get, as other solutions didn't work
     const req = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://storage.googleapis.com/coding-session-rest-api/${id}`)}`)
     if(req.status == 200) {
