@@ -1,0 +1,43 @@
+.details {
+  max-width: 80%;
+  margin: 0 auto 25px;
+  padding: 15px;
+  border-radius: 6px;
+
+ .opening-hours {
+   max-width: 300px;
+   border: 7px solid #fff;
+   background: rgba(0, 0, 0, 0.3);
+   margin: 30px auto;
+   position: relative;
+   padding: 0 0 20px;
+   box-sizing: border-box;
+
+   .opening-hours__title {
+     text-align: center;
+     font-size: 30px;
+     padding: 10px;
+     span {
+       display: block;
+     }
+   }
+   .opening-hours__section {
+      text-align: center;
+     .opening-hours__section__item {
+       padding: 5px;
+     }
+     .opening-hours__day {
+       text-transform: capitalize;
+     }
+   }
+ }
+}
+
+@media only screen and (max-width: 1129px) {
+  .details {
+    width: 95%;
+    margin: 0 auto 25px;
+    padding: 15px;
+    border-radius: 9px;
+  }
+}

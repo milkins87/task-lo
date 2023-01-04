@@ -1,0 +1,63 @@
+$main-color: #fff;
+$bg-color: #f6f6f6;
+$main-title-size-mobile: 30px;
+$main-title-size-desktop: 60px;
+
+* {
+  box-sizing: border-box;
+  color: $main-color;
+}
+
+body {
+  background: url(images/diffuse-cocktail-bar.jpg) $bg-color no-repeat;
+  height: 100vh;
+  background-size: cover;
+  margin: 0;
+  padding: 30px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: $main-color;
+  font-size: $main-title-size-desktop;
+  border: 5px solid $main-color;
+  margin: 5px auto;
+  width: fit-content;
+  padding: 0 25px;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0px 30px 0px;
+}
+
+p {
+  line-height: 1.5;
+  padding: 0px 15px;
+}
+
+@media only screen and (max-width: 1129px) {
+  .details {
+    width: 95%;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 9px;
+    margin-bottom: 25px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: $main-title-size-mobile;
+  }
+
+  h2 {
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 0 30px;
+  }
+}
+
+
+
