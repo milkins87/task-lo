@@ -47,6 +47,47 @@
         "avoidEscape": true,
         "allowTemplateLiterals": true
       }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "if"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "function"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "class"
+      },
+      {
+        "blankLine": "any",
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
+      }
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "MemberExpression": 1,
+        "VariableDeclarator": {
+          "var": 2,
+          "let": 2,
+          "const": 3
+        }
+      }
     ]
   },
   "plugins": ["react", "import", "jsx-a11y", "@typescript-eslint"],

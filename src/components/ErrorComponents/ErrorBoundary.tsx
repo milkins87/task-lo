@@ -1,5 +1,6 @@
 // mostly code from reactjs.org/docs/error-boundaries.html
 import { Component, ErrorInfo, ReactElement } from 'react'
+
 class ErrorBoundary extends Component<{children: ReactElement}> {
   state = { hasError: false, }
   static getDerivedStateFromError() {

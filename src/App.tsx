@@ -9,8 +9,8 @@ const App: FunctionComponent = () => {
     <div>
       <BrowserRouter>
         <Routes>
-            <Route path="/:id" element={<Details />} />
-            <Route path="*" element={<ErrorPage />} />
+          <Route path="/:id" element={<Details />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
     </div>
