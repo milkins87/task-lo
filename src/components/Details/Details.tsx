@@ -33,7 +33,7 @@ const Details: FunctionComponent = () => {
     const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://storage.googleapis.com/coding-session-rest-api/${id}`)}`)
 
     if(response.status == 200) {
-      const data = await response.json() as DetailsAPIResponse
+      const data = await response.json()
       const parsedJson = JSON.parse(data.contents) as DetailsAPIResponse
 
       if(data.status.http_code == 404) {
@@ -46,7 +46,7 @@ const Details: FunctionComponent = () => {
 
   useEffect(() => {
     const days = details?.opening_hours?.days
-    const TIME_SEPARATOR = ' - '
+    const TIME_SEPARATOR = '-'
     const SEGMENT_SEPARATOR = '|'
 
     const groups = days && Object.entries(days).reduce((obj, [key, hours,]) => {
@@ -60,7 +60,6 @@ const Details: FunctionComponent = () => {
 
       return obj
     }, {})
-
 
     const result = groups && Object.values(groups).map(({ values, }) => {
       const first = values[0]
@@ -101,9 +100,8 @@ const Details: FunctionComponent = () => {
             )}
           </div>
         </div>
-        <div>
-        </div>
-      </div>}
+      </div>
+    }
   </>
   )
 }
